@@ -2,7 +2,7 @@ Template.postForm.events({
 	'submit form': function(event){
 		event.preventDefault();
 		var content = document.getElementById('content').value;
-		Post.insert({content: content, created: new Date()});
+		Meteor.call('addPost', content);
 		event.target.reset();
 	}
 });

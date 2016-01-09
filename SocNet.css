@@ -14,6 +14,7 @@ body {
 
 #wrapper a:hover {
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 #profile-area {

@@ -4,31 +4,15 @@
 </head>
 
 <body>
+	{{> loginButtons}}
 	<div id="wrapper">
 		<div id="profile-area">
-			<div id="side-profile" class="side-box"><a href="">Username</a></div>
-			<div id="side-all" class="side-box"><a href="">Community</a></div>
-			<div id="side-youlike" class="side-box">
-				<h3>Following</h3>
-				<div class="boxcontent">
-					<div><a class="filter-user">user2</a></div>
-					<div><a class="filter-user">user3</a></div>
-					<div><a class="filter-user">user4</a></div>
-				</div>
-			</div>	
-			<div id="side-likeyou" class="side-box">
-				<h3>Follows</h3>
-				<div class="boxcontent">
-					<div><a class="filter-user">user5</a></div>
-					<div><a class="filter-user">user6</a></div>
-					<div><a class="filter-user">user7</a></div>
-					<div><a class="filter-user">user8</a></div>
-					<div><a class="filter-user">user9</a></div>
-				</div>
-			</div>
+			{{> profileArea}}
 		</div>
 		<div id="feed-area">
-			{{> postForm}}
+			{{#if currentUser}}
+				{{> postForm}}
+			{{/if}}
 			{{> postsList}}
 		</div>
 	</div>
